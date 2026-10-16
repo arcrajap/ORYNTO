@@ -34,7 +34,7 @@ It should be possible to:
 
 ## Architecture stance
 
-BigCapital is expected to provide a substantial part of ORYNTO's accounting kernel, subject to upstream-license review and architectural validation. It is **infrastructure, not ORYNTO's product architecture or user experience**.
+BigCapital is expected to provide a substantial part of ORYNTO's accounting kernel, subject to architectural validation. It is **infrastructure, not ORYNTO's product architecture or user experience**.
 
 ORYNTO's differentiated layers are expected to include:
 
@@ -72,9 +72,3 @@ No production claims should be inferred from this repository yet.
 **Working promise:** Your business already talks. Now it can think and act.
 
 The product name is **ORYNTO**, not Duora. Duora is a predecessor concept whose useful requirements and decisions are being re-evaluated and migrated with traceability rather than copied blindly.
-
-## Licensing
-
-No project license has been selected yet. Before importing or modifying upstream BigCapital code, the project must complete and record the upstream-license and derivative-work decision in `docs/product/DECISIONS.md`.
-
-Do not add proprietary assumptions, incompatible dependencies, or a license file until that decision is closed.
