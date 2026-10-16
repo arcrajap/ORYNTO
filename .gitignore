@@ -1,0 +1,60 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Node / JS
+node_modules/
+.pnpm-store/
+.yarn/
+.npm/
+dist/
+build/
+coverage/
+.next/
+.turbo/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs / runtime
+*.log
+logs/
+tmp/
+.temp/
+
+# Local databases / generated data
+*.sqlite
+*.sqlite3
+*.db
+storage/
+uploads/
+
+# Test / generated artifacts
+playwright-report/
+test-results/
+artifacts/
+
+# AI/editor local state
+.cursor/
+
+# Keep intentional placeholders
+!.gitkeep
