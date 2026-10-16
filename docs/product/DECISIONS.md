@@ -60,25 +60,28 @@ This is the authoritative decision ledger for product/architecture choices that 
 
 ## DEC-008 — BigCapital adoption model
 
-**Status:** Proposed / BLOCKING  
-**Question:** Do we fork BigCapital as the accounting/domain core, wrap selected services, or adopt a hybrid? What license and distribution obligations follow?  
-**Default until closed:** **Do not import upstream source into ORYNTO.**  
-**Required evidence:**
+**Status:** Proposed / TECHNICAL  
+**Founder decision:** Licensing has already been reviewed by the Founder and is **not an ORYNTO implementation blocker**. Do not reopen licensing as a gating question unless the Founder explicitly asks to revisit it.  
+**Question remaining:** Do we fork BigCapital as the accounting/domain core, wrap selected services, or adopt a hybrid?  
+**Required technical evidence:**
 
-- exact upstream repository/version/license;
-- AGPL/other license obligations and counsel-sensitive areas;
+- exact upstream repository/version we will base from;
 - architecture/domain/service audit;
-- tenant model audit;
-- dependency/license inventory;
-- upstream update strategy;
-- fork-vs-wrapper decision;
-- cloud/open-core distribution implications.
+- tenant model and isolation audit;
+- auth/permissions model;
+- accounting, inventory, document, and reporting boundaries worth reusing;
+- test/security posture;
+- upgrade/upstream-sync strategy;
+- fork-vs-wrapper-vs-hybrid recommendation;
+- concrete list of upstream UI/architecture concepts ORYNTO will not inherit.
+
+**Implementation rule:** BigCapital adoption may proceed once the technical topology is clear enough for a reversible first import. Licensing review is not a prerequisite.
 
 ## DEC-009 — Repository topology
 
 **Status:** Proposed  
-**Question:** Monorepo topology after BigCapital decision.  
-**Preferred direction:** product apps + platform/runtime packages + deterministic core adapters in one governed repository unless upstream-license boundaries require separation.
+**Question:** Choose the topology that best supports BigCapital reuse while keeping ORYNTO runtime layers independently governed.  
+**Preferred direction:** product apps + platform/runtime packages + deterministic core/adapters in one governed repository unless the technical audit shows a cleaner boundary.
 
 ## DEC-010 — First architecture proof
 
@@ -101,10 +104,10 @@ This is the authoritative decision ledger for product/architecture choices that 
 
 ## Open decisions before implementation acceleration
 
-1. **DEC-008 BigCapital adoption/license** — blocker.
-2. **DEC-009 repository topology** — depends on DEC-008.
+1. **DEC-008 BigCapital technical adoption model** — technical decision, not license gate.
+2. **DEC-009 repository topology** — depends on enough of DEC-008 being understood.
 3. Authentication/identity provider architecture.
 4. Primary database and context projection strategy after upstream audit.
 5. Model-provider baseline and data-handling policy.
 6. Official WhatsApp provider path (Cloud API direct vs BSP) when channel implementation begins.
-7. Open-core/cloud SKU and licensing boundary.
+7. Open-core/cloud SKU boundaries if/when commercially relevant.
