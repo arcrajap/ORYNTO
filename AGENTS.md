@@ -30,7 +30,7 @@ When code conflicts with an accepted product/architecture decision, treat the co
 7. **No secrets in model context.** Model prompts receive handles or sanitized values only where possible.
 8. **No fake completeness.** Placeholder integrations, mocked compliance, fake financial correctness, or demo-only behavior must be labeled.
 9. **Auditability beats magic.** Users must be able to understand what happened, why, from which source, and who/what authorized it.
-10. **Preserve upstream obligations.** Do not import BigCapital code until the license/derivative-work decision is recorded.
+10. **BigCapital is a core candidate, not the product shell.** Reuse its deterministic accounting/domain strengths without inheriting its UX, information architecture, or module boundaries by default.
 
 ## Product UX rules
 
@@ -75,4 +75,4 @@ A story is not done because code compiles. Done means its acceptance contract is
 
 ## Current phase
 
-The repository is in **FOUNDATION / PRE-IMPLEMENTATION** until the BigCapital adoption/license decision and ORYNTO architecture baseline are accepted.
+The repository is in **FOUNDATION / PRE-IMPLEMENTATION** until the ORYNTO architecture baseline and BigCapital technical adoption topology are accepted. Licensing is not an implementation gate; the Founder has already reviewed it.
